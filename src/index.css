@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-charcoal-950 text-slate-200 antialiased;
+  /* 골드 테마 스크롤바 */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    @apply bg-charcoal-900;
+  }
+  &::-webkit-scrollbar-thumb {
+    @apply bg-gold-600/50 rounded-full hover:bg-gold-500;
+  }
+}
+
+/* Glassmorphism Utility */
+.glass-panel {
+  @apply bg-charcoal-900/40 backdrop-blur-md border border-gold-500/10 shadow-xl;
+}
+
+.gold-gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-200 via-gold-400 to-gold-200;
+}
+
