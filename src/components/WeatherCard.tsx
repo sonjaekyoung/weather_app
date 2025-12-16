@@ -1,6 +1,6 @@
 import React from 'react';
 import { WeatherData, UnitSystem } from '../types/weather';
-import { formatTime, capitalize } from '../utils/format';
+import { formatTime } from '../utils/format';
 
 interface WeatherCardProps {
   data: WeatherData;

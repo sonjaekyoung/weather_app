@@ -1,4 +1,3 @@
-import React from 'react';
 import { Cloud, Search, MapPin, RefreshCw, Thermometer, Wind, Droplets, Sunrise, Sunset, Moon } from 'lucide-react';
 
 export const Icons = {

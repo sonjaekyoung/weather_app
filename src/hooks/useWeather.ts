@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { WeatherData, WeatherError, WeatherState, UnitSystem, Coordinates } from '../types/weather';
+import { WeatherState, UnitSystem, Coordinates, WeatherError } from '../types/weather';
 import * as api from '../services/api';
 
 export const useWeather = () => {
