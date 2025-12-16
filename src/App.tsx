@@ -70,7 +70,9 @@ function App() {
 
     // 3. Permission Denied OR Location Error (Timeout/Unavailable) -> Show Search Fallback
     // Code 1: Denied, 2: Unavailable, 3: Timeout
-    if (status === 'error' && ((error?.code as any) === 1 || (error?.code as any) === 2 || (error?.code as any) === 3)) {
+    if (status === 'error' && error) {
+      const errCode = error.code as number;
+      if (errCode === 1 || errCode === 2 || errCode === 3) {
       return (
         <div className="space-y-6">
            {/* Show error message gently above the search box */}
@@ -82,6 +84,7 @@ function App() {
            <SearchFallback onSearch={searchCity} isLoading={status === 'loading-weather'} />
         </div>
       );
+      }
     }
 
     // 4. API Error / Other Errors
