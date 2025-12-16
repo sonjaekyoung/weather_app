@@ -7,7 +7,7 @@ interface WeatherCardProps {
   unit: UnitSystem;
 }
 
-const WeatherCard: React.FC<WeatherCardProps> = ({ data, unit }) => {
+const WeatherCard: React.FC<WeatherCardProps> = ({ data }) => {
   const iconUrl = `https://openweathermap.org/img/wn/${data.icon}@4x.png`;
 
   return (

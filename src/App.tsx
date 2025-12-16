@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useWeather } from './hooks/useWeather';
 import { 
   Header, 
