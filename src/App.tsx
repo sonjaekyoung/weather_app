@@ -70,7 +70,7 @@ function App() {
 
     // 3. Permission Denied OR Location Error (Timeout/Unavailable) -> Show Search Fallback
     // Code 1: Denied, 2: Unavailable, 3: Timeout
-    if (status === 'error' && (error?.code === 1 || error?.code === 2 || error?.code === 3)) {
+    if (status === 'error' && ((error?.code as any) === 1 || (error?.code as any) === 2 || (error?.code as any) === 3)) {
       return (
         <div className="space-y-6">
            {/* Show error message gently above the search box */}
