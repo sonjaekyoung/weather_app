@@ -71,8 +71,8 @@ function App() {
     // 3. Permission Denied OR Location Error (Timeout/Unavailable) -> Show Search Fallback
     // Code 1: Denied, 2: Unavailable, 3: Timeout
     if (status === 'error' && error) {
-      // Forcefully cast error.code to number to satisfy TypeScript compiler
-      const errCode = (error as any).code as number;
+      const errCode = error.code;
+      // @ts-ignore
       if (errCode === 1 || errCode === 2 || errCode === 3) {
       return (
         <div className="space-y-6">
